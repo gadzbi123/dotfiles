@@ -26,7 +26,7 @@
 # Each block command defaults to the script name to avoid boilerplate.
 # Change $SCRIPT_DIR to the location of your scripts!
 command=$SCRIPT_DIR/$BLOCK_NAME
-separator_block_width=15
+separator_block_width=10
 markup="pango"
 
 # Volume indicator
@@ -111,8 +111,13 @@ interval=10
 separator=false
 
 [bandwidth]
-#INTERFACE=eth0
-interval=5
+INTERFACE=enp2s0
+INLABEL=IN:
+OUTLABEL=OUT:
+color=#33cc33
+TREAT_UKNKNOWN_AS_UP=1
+command=$SCRIPT_DIR/bandwidth/bandwidth
+interval=1
 
 [load_average]
 label=LOAD
@@ -129,7 +134,7 @@ interval=30
 # Date Time
 #
 [time]
-command=date '+%Y-%m-%d %H:%M:%S'
+command=date '+%H:%M:%S %a %d-%m-%Y'
 interval=1
 
 # Generic media player support
