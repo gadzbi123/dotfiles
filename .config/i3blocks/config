@@ -52,7 +52,7 @@ signal=10
 label=CPU:
 command=echo $(expr 100 - $(top -b -n 1 | grep Cpu | awk '{print $8}'|cut -f 1 -d "."))%
 color=#0072CE
-interval=1
+interval=3
 #min_width=CPU 100.00%
 #separator=false
 
@@ -60,7 +60,7 @@ interval=1
 label=CPU:
 command=$SCRIPT_DIR/temperature/temperature
 color=#0072CE
-interval=1
+interval=5
 
 
 #gpu temp
@@ -76,7 +76,7 @@ label=
 color=#ff9d5c
 command=$SCRIPT_DIR/memory/memory 
 #separator=false
-interval=1
+interval=3
 
 [memory]
 label=SWAP
@@ -99,14 +99,16 @@ interval=30
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
-#IFACE=wlan0
+IFACE=wlp3s0
 color=#00FF00
 interval=10
-separator=false
+#separator=false
+
 
 [wifi]
-#INTERFACE=wlp3s0
+INTERFACE=wlp3s0
 label=wifi:
+#command=$SCRIPT_DIR/wifi/wifi
 interval=10
 separator=false
 
@@ -117,7 +119,9 @@ OUTLABEL=OUT:
 color=#33cc33
 TREAT_UKNKNOWN_AS_UP=1
 command=$SCRIPT_DIR/bandwidth/bandwidth
-interval=1
+min_width=IN:1000 OUT:1000
+align=center
+interval=2
 
 [load_average]
 label=LOAD

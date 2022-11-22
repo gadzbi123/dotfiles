@@ -41,6 +41,15 @@ exec --no-startup-id nm-applet
 #exec_always --no-startup-id xsetroot -cursor_name left_ptr -solid "#000000"
 exec_always --no-startup-id nitrogen --save --set-centered ~/.config/.wallpapers/0.png
 
+# Set the primary screen resfresh rate and size
+exec_always --no-startup-id xrandr --output DVI-D-0 -r 144 --mode 1920x1080 
+
+# picom for transparency and shadows
+exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf --experimental-backends
+
+# Power off combination
+bindsym $mod+Shift+p exec poweroff
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -183,8 +192,17 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-
 bindsym $mod+r mode "resize"
+
+# gaps
+gaps outer 0
+gaps inner 4
+gaps top 0
+gaps bottom 0
+default_border pixel 1
+#default_border none
+
+# Launch start apps
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
