@@ -1,18 +1,16 @@
-" Start pathogen - DEPRICATED
-"execute pathogen#infect()
-"filetype plugin indent on
-
 " Start vimPlug
-call plug#begin()
+ call plug#begin()
 
-" Launch gruvbox
-Plug 'morhetz/gruvbox'  
-" Launch airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+    " Launch gruvbox
+    Plug 'morhetz/gruvbox'  
+    
+    " Launch airline
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    
+    " NerdTree
+    Plug 'preservim/nerdtree'
 
-" Multicursor
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " Stop vimPlug
 call plug#end()
 
@@ -21,6 +19,7 @@ set number relativenumber
 syntax enable 
 set hidden
 set shiftwidth=4 softtabstop=4 tabstop=8 expandtab smarttab
+set mouse=nicr
 
 """""""""""""""""""""""""""""""""""""""""""""
 " => Keybindings
@@ -38,8 +37,22 @@ noremap <silent> <C-Right> :vertical resize -3<CR>
 noremap <silent> <C-Up> :resize +3<CR>
 noremap <silent> <C-Down> :resize -3<CR>
 
-"Mouse scroll
-set mouse=nicr
+"Exit insert mode
+inoremap <C-c> <Esc>
+
+"buffer jumping
+nnoremap <C-h> :b 1<CR>
+nnoremap <C-j> :b 2<CR>
+nnoremap <C-k> :b 3<CR>
+nnoremap <C-l> :b 4<CR>
+
+"tab in split
+nnoremap <C-q> <C-w>q
+noremap <Leader>vb :vertical ball<CR>
+
+"NERDTree maping
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeFocus<CR>
 
 " True color for some terminals
 if (empty($TMUX))

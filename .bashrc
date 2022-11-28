@@ -136,3 +136,4 @@ ex ()
   fi
 }
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+. "$HOME/.cargo/env"
