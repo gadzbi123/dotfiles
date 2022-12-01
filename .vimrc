@@ -10,12 +10,19 @@
     
     " NerdTree
     Plug 'preservim/nerdtree'
-
+    
+    " Latex
+    " sudo pacman -S texlive-most zathura zathura-pdf-poppler
+    Plug 'lervag/vimtex'
+    
+    " Smooth scroll
+    Plug 'psliwka/vim-smoothie'
 " Stop vimPlug
 call plug#end()
 
 " Basic vim config
 set number relativenumber
+filetype plugin indent on
 syntax enable 
 set hidden
 set shiftwidth=4 softtabstop=4 tabstop=8 expandtab smarttab
@@ -26,10 +33,10 @@ set mouse=nicr
 """""""""""""""""""""""""""""""""""""""""""""
 
 "Remap splits navigation to just CTRL + hjkl
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-l> <C-w>l
 
 " Make adjusing split sizes a bit more friendly
 noremap <silent> <C-Left> :vertical resize +3<CR>
@@ -64,9 +71,22 @@ if (empty($TMUX))
   endif
 endif
 
+" Set font
+"set guifont=Consolas
+
+" Smoothie settings
+"g:smoothie_enabled = 0 
+nnoremap <unique> <C-D> <cmd>call smoothie#do("\<C-D>") <CR>
+vnoremap <unique> <C-D> <cmd>call smoothie#do("\<C-D>") <CR>
+nnoremap <unique> <C-F> <cmd>call smoothie#do("\<C-F>") <CR>
+vnoremap <unique> <C-F> <cmd>call smoothie#do("\<C-F>") <CR>
+nnoremap <unique> <C-B> <cmd>call smoothie#do("\<C-B>") <CR>
+vnoremap <unique> <C-B> <cmd>call smoothie#do("\<C-B>") <CR>
+nnoremap <unique> <C-U> <cmd>call smoothie#do("\<C-U>") <CR>
+vnoremap <unique> <C-U> <cmd>call smoothie#do("\<C-U>") <CR>
+
 " Gruvbox config
-"set bg=light
-set bg=dark
+set bg=dark "light
 let g:gruvbox_contrast_dark = '(hard)'
 autocmd vimenter * ++nested colorscheme gruvbox
 "let g:gruvbox_termcolors=16
@@ -76,3 +96,6 @@ autocmd vimenter * ++nested colorscheme gruvbox
 " Vim-airline config
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'jsformatter'
+
+" Latex config
+let g:vimtex_view_method = 'zathura'

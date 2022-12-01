@@ -38,13 +38,16 @@ exec --no-startup-id nm-applet
 
 # reset the background color (or set wallpaper)
 #exec_always --no-startup-id xsetroot -cursor_name left_ptr -solid "#000000"
-exec_always --no-startup-id nitrogen --save --set-zoom-fill ~/.config/.wallpapers/0011.jpg
+exec_always --no-startup-id nitrogen --save --set-zoom-fill ~/.config/wallpapers/0011.jpg
 
 # Set the primary screen resfresh rate and size
 exec_always --no-startup-id xrandr --output DVI-D-0 -r 144 --mode 1920x1080 
 
 # picom for transparency and shadows
 exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf --experimental-backends
+
+# launch polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Power off combination
 bindsym $mod+Shift+p exec poweroff
@@ -196,17 +199,21 @@ bindsym $mod+r mode "resize"
 # gaps
 gaps outer 4
 gaps top 2
-gaps bottom 2
+#gaps bottom 2
 gaps inner 0
 default_border pixel 1
 #default_border none
+
+#polybar gap
+gaps bottom 53
 
 # Launch start apps
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-	tray_output primary		
-	position bottom
-	status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks 
-}
+
+#bar {
+#	tray_output primary		
+#	position bottom
+#	status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks 
+#}
