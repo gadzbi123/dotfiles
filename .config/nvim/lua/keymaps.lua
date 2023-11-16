@@ -43,8 +43,8 @@ if string.find(vim.loop.os_uname().sysname, "Linux") then
   M.nnoremap("<leader>ocf",":e ~/.config/nvim/init.lua <CR>")
   M.nnoremap("<leader>soc",":source ~/.config/nvim/init.lua <CR>")
 else
-   M.nnoremap("<leader>ocf",":e C:/Users/Gadzbi/AppData/Local/nvim/init.lua <CR>")
-   M.nnoremap("<leader>soc",":source C:/Users/Gadzbi/AppData/Local/nvim/init.lua <CR>")
+  M.nnoremap("<leader>ocf",":e C:/Users/Gadzbi/AppData/Local/nvim/init.lua <CR>")
+  M.nnoremap("<leader>soc",":source C:/Users/Gadzbi/AppData/Local/nvim/init.lua <CR>")
 end
 
 -- Spliting

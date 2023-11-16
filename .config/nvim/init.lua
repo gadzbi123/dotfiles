@@ -33,9 +33,18 @@ plugins = {
    'hrsh7th/cmp-path',                              
    'hrsh7th/cmp-buffer',                            
    'hrsh7th/vim-vsnip',  
+   -- Telescope
+   'nvim-lua/plenary.nvim',
+   'BurntSushi/ripgrep',
+   'nvim-telescope/telescope-file-browser.nvim',
+   { 'nvim-telescope/telescope-fzf-native.nvim',
+   build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
+    'nvim-telescope/telescope.nvim',
+   
 }
 require("lazy").setup(plugins)
 require("lsp")
+require("_telescope")
 
 vim.cmd("colorscheme dracula")
 
