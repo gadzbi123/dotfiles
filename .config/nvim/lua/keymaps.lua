@@ -39,8 +39,13 @@ M.vnoremap('[',"xi[]<Esc>P")
 M.vnoremap(']',"xi[]<Esc>P")
 
 -- Config modification
-M.nnoremap("<leader>ocf",":e C:/Users/Gadzbi/AppData/Local/nvim/init.lua <CR>")
-M.nnoremap("<leader>soc",":source C:/Users/Gadzbi/AppData/Local/nvim/init.lua <CR>")
+if string.find(vim.loop.os_uname().sysname, "Linux") then
+  M.nnoremap("<leader>ocf",":e ~/.config/nvim/init.lua <CR>")
+  M.nnoremap("<leader>soc",":source ~/.config/nvim/init.lua <CR>")
+else
+   M.nnoremap("<leader>ocf",":e C:/Users/Gadzbi/AppData/Local/nvim/init.lua <CR>")
+   M.nnoremap("<leader>soc",":source C:/Users/Gadzbi/AppData/Local/nvim/init.lua <CR>")
+end
 
 -- Spliting
 M.nnoremap("<leader>v",":vs<CR>")
