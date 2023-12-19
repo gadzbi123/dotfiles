@@ -26,7 +26,7 @@ vim.opt.scrolloff = 5
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
-vim.opt.clipboard:append("unnamedplus") -- Set yank to copy to clipboard
+vim.opt.clipboard = "" -- yank to clipboard "unnamedplus"
 vim.g.mapleader = " "
 vim.wo.relativenumber = true
 vim.opt.timeoutlen = 3000
