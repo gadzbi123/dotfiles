@@ -39,8 +39,8 @@ plugins = {
    'nvim-telescope/telescope-file-browser.nvim',
    { 'nvim-telescope/telescope-fzf-native.nvim',
    build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
-    'nvim-telescope/telescope.nvim',
-   
+   'nvim-telescope/telescope.nvim',
+   { 'numToStr/Comment.nvim', lazy = false },   
 }
 require("lazy").setup(plugins)
 require("lsp")
@@ -63,3 +63,5 @@ rt.setup({
   },
 })
 
+-- Comment Tools --
+require('Comment').setup()
