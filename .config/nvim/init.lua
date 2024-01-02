@@ -41,6 +41,7 @@ plugins = {
    build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
    'nvim-telescope/telescope.nvim',
    { 'numToStr/Comment.nvim', lazy = false },   
+   { "kylechui/nvim-surround", version = "*", event = "VeryLazy" }
 }
 require("lazy").setup(plugins)
 require("lsp")
@@ -65,3 +66,6 @@ rt.setup({
 
 -- Comment Tools --
 require('Comment').setup()
+
+-- Nvim Surround --
+require("nvim-surround").setup()

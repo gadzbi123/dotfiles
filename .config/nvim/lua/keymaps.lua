@@ -31,12 +31,14 @@ M.vnoremap('J', ":m '>+1<CR>gv=gv")
 M.vnoremap('K', ":m '<-2<CR>gv=gv")
 -- Save the pasted text (if replacing with visual mode)
 M.vnoremap('p',"pgvy")
+--[[ Ancient to vim-surround
 M.vnoremap('(',"xi()<Esc>P")
 M.vnoremap(')',"xi()<Esc>P")
 M.vnoremap('{',"xi{}<Esc>P")
 M.vnoremap('}',"xi{}<Esc>P")
 M.vnoremap('[',"xi[]<Esc>P")
 M.vnoremap(']',"xi[]<Esc>P")
+]]--
 
 -- Config modification
 if string.find(vim.loop.os_uname().sysname, "Linux") then
