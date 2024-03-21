@@ -30,3 +30,4 @@ vim.opt.clipboard = "" -- yank to clipboard "unnamedplus"
 vim.g.mapleader = " "
 vim.wo.relativenumber = true
 vim.opt.timeoutlen = 3000
+vim.opt.colorcolumn = "81"
