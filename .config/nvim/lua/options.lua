@@ -28,6 +28,7 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.clipboard = "" -- yank to clipboard "unnamedplus"
 vim.g.mapleader = " "
+vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.timeoutlen = 3000
 vim.opt.colorcolumn = "81"
