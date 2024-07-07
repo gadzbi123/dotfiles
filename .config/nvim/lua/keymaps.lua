@@ -66,3 +66,8 @@ M.nnoremap("<C-d>","<C-d>zz")
 M.nnoremap("<C-u>","<C-u>zz")
 M.nnoremap("<C-f>","<C-f>zz")
 M.nnoremap("<C-b>","<C-b>zz")
+
+-- ScratchPad
+vim.keymap.set("n", "<M-C-n>", "<cmd>Scratch<cr>")
+vim.keymap.set("n", "<M-C-o>", "<cmd>ScratchOpen<cr>")
+
