@@ -9,17 +9,18 @@ if not vim.loop.fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
+    "--branch=stable",
     lazypath,
   })
 end
 vim.opt.rtp:prepend(lazypath)
 
-plugins = {
+local plugins = {
      "folke/which-key.nvim",
      { "folke/neoconf.nvim", cmd = "Neoconf" },
      "folke/neodev.nvim",
      "Mofiqul/dracula.nvim",
+     "WhiteBlackGoose/andromeda.nvim",
      "williamboman/mason.nvim",
      "williamboman/mason-lspconfig.nvim",
      "neovim/nvim-lspconfig",
@@ -33,43 +34,49 @@ plugins = {
      'hrsh7th/cmp-nvim-lua',
     'hrsh7th/cmp-nvim-lsp-signature-help',
     'hrsh7th/cmp-vsnip',
-    'hrsh7th/cmp-path',                              
-    'hrsh7th/cmp-buffer',                            
-    'hrsh7th/vim-vsnip',   
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/vim-vsnip',
     -- Telescope
     'nvim-lua/plenary.nvim',
     'BurntSushi/ripgrep',
     'nvim-telescope/telescope-file-browser.nvim',
-    { 'nvim-telescope/telescope-fzf-native.nvim',
-    build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
+    {
+      'nvim-telescope/telescope-fzf-native.nvim',
+      build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build\
+      build --config Release && cmake --install build --prefix build'
+    },
     'nvim-telescope/telescope.nvim',
-    { 'numToStr/Comment.nvim', lazy = false },   
+    'numToStr/Comment.nvim',
     { "kylechui/nvim-surround", version = "*", event = "VeryLazy" },
     -- ScrachPad
     {
       "LintaoAmons/scratch.nvim", event = "VeryLazy",
     },
     {
-      "nvim-treesitter/nvim-treesitter", 
+      "nvim-treesitter/nvim-treesitter",
       build = ":TSUpdate",
-      config = function () 
+      config = function ()
         local configs = require("nvim-treesitter.configs")
 
         configs.setup({
-            ensure_installed = "all",
+            ensure_installed = {"lua"},
             sync_install = false,
             highlight = { enable = true },
-            indent = { enable = true },  
+            indent = { enable = true },
           })
       end
     },
 }
 require("lazy").setup(plugins)
--- require("lsp")
+require("lsp")
 require('lspconfig').lua_ls.setup{}
 require("plugins/telescope")
+require("terminal")
 
+-- vim.cmd("colorscheme andromeda")
 vim.cmd("colorscheme dracula")
+
 require('Comment').setup()
 require("nvim-surround").setup()
 

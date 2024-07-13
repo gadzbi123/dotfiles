@@ -5,7 +5,7 @@ telescope.setup{
       mappings = {
           i = {
             --["<c-a>"] = function() print(vim.inspect(action_state.get_selected_entry())) end 
-          }        
+          }
       }
   },
    extensions = {
@@ -21,7 +21,7 @@ telescope.setup{
 
 
 local mappings = {}
-mappings.curr_buf = function() 
+mappings.curr_buf = function()
   local opt = require('telescope.themes').get_dropdown({height=10, previewer=false})
   require('telescope.builtin').current_buffer_fuzzy_find(opt)
 end
