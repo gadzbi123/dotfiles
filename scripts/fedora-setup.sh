@@ -1,3 +1,5 @@
+set -eou
+
 sudo dnf update --refresh
 
 sudo dnf install kernel-devel kernel-headers gcc make dkms acpid libglvnd-glx libglvnd-opengl libglvnd-devel pkgconfig
@@ -8,7 +10,7 @@ sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfre
 
 sudo dnf makecache
 
-sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda
+sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda vidia-vaapi-driver libva-utils vdpauinfo
 
 sudo dnf install @gnome-desktop neovim -y
 
