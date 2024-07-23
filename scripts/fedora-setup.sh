@@ -33,3 +33,8 @@ sudo dnf install code -y
 sudo dnf install steam --enablerepo=rpmfusion-nonfree-steam  -y 
 
 sudo dnf install discord -y
+
+# Mount gry i filmy
+sudo mkdir -p /run/media/gadzbi/GryIFilmy
+sudo -s eval 'echo UUID=5C6AF5226AF4FA1A /run/media/gadzbi/GryIFilmy ntfs defaults 0 2 >> /etc/fstab2; mount -a'
+
