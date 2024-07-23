@@ -12,7 +12,7 @@ sudo dnf makecache -y
 
 sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda vidia-vaapi-driver libva-utils vdpauinfo -y
 
-sudo dnf install @gnome-desktop neovim fedora-workstation-repositories pavucontrol golang fzf ripgrep xclip -y
+sudo dnf install @gnome-desktop neovim fedora-workstation-repositories pavucontrol golang fzf ripgrep xclip btop gimp -y
 
 sudo setsebool -P selinuxuser_execheap 1
 
@@ -33,3 +33,8 @@ sudo dnf install code -y
 sudo dnf install steam --enablerepo=rpmfusion-nonfree-steam  -y 
 
 sudo dnf install discord -y
+
+# Mount gry i filmy
+sudo mkdir -p /run/media/gadzbi/GryIFilmy
+sudo -s eval 'echo UUID=5C6AF5226AF4FA1A /run/media/gadzbi/GryIFilmy ntfs defaults 0 2 >> /etc/fstab2; mount -a'
+
