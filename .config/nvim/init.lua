@@ -16,11 +16,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+  -- Shows what key hints that lead to actions in the popup window below
   "folke/which-key.nvim",
-  { "folke/neoconf.nvim",        cmd = "Neoconf" },
-  "folke/neodev.nvim",
+  "folke/neodev.nvim", -- TODO change to lazydev.nvim next time
+  -- Themes
   "Mofiqul/dracula.nvim",
   "WhiteBlackGoose/andromeda.nvim",
+  -- Lsp stuff
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
   "neovim/nvim-lspconfig",
@@ -47,11 +49,30 @@ local plugins = {
       build --config Release && cmake --install build --prefix build'
   },
   'nvim-telescope/telescope.nvim',
+  -- Comments
   'numToStr/Comment.nvim',
   { "kylechui/nvim-surround", version = "*", event = "VeryLazy" },
   -- ScrachPad
   {
-    "LintaoAmons/scratch.nvim", event = "VeryLazy",
+    "LintaoAmons/scratch.nvim",
+    config = function()
+      require("scratch").setup({
+        filetypes = { "md", "txt" },
+        filetype_details = {
+          js = {},
+          go = {
+            requireDir = true,
+            filename = "main",
+            content = { "package main", "", "func main() {", "  ", "}" },
+            cursor = {
+              location = { 4, 2 },
+              insert_mode = false,
+            },
+          },
+        },
+      })
+    end,
+    event = "VeryLazy",
   },
   {
     "nvim-treesitter/nvim-treesitter",
