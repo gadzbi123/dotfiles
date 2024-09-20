@@ -39,6 +39,7 @@ sudo mkdir -p /run/media/gadzbi/GryIFilmy
 sudo -s eval 'echo UUID=5C6AF5226AF4FA1A /run/media/gadzbi/GryIFilmy ntfs defaults 0 2 >> /etc/fstab2; mount -a'
 
 # Add default editor
-echo export EDITOR=nvim >> $HOME/.bashrc
+echo "\nexport EDITOR=nvim" >> $HOME/.bashrc
+echo "\nexport PATH=$PATH:$HOME/go/bin" >> $HOME/.bashrc
 
 
