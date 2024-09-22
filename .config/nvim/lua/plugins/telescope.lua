@@ -31,7 +31,9 @@ local builtin = require("telescope.builtin")
 vim.keymap.set('n', '<leader>ff', function() builtin.find_files(findHiddenExcludingGit) end)
 vim.keymap.set('n', '<leader>fg', builtin.live_grep)
 -- vim.keymap.set('n', '<leader>fd', select_dir_for_grep, {})
-vim.keymap.set("n", "<space>/", builtin.current_buffer_fuzzy_find)
+vim.keymap.set("n", "<space>/", function()
+builtin.grep_string({search = vim.fn.input("Grep > ")})
+end)
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 
 return mappings
