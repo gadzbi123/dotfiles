@@ -95,8 +95,10 @@ require('lspconfig').lua_ls.setup {}
 require("plugins/telescope")
 require("terminal")
 
--- vim.cmd("colorscheme andromeda")
-vim.cmd("colorscheme dracula")
+vim.opt.background = "dark"
+vim.cmd("colorscheme andromeda")
+-- vim.cmd("colorscheme dracula")
 
 require('Comment').setup()
 require("nvim-surround").setup()
+require("vscode-config")
