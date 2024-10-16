@@ -10,3 +10,6 @@ ln -s $HOME/dotfiles/.config/nvim $HOME/.config/nvim
 
 # Link scratch notes
 ln -s $HOME/proj/notes/scratch.nvim ~/.cache/nvim
+
+# Link alacritty
+ln -s $HOME/dotfiles/.config/alacritty $HOME/.config/alacritty

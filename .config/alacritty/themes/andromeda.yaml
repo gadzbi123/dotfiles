@@ -1,0 +1,64 @@
+# Colors (Baitong)
+colors:
+  primary:
+    background: '#23262E'
+    foreground: '#D5CED9'
+
+  cursor:
+    text: '#D5CED9'
+    cursor: '#ffffff' #TODO
+
+  vi_mode_cursor:
+    text: '#23262E' #
+    cursor: '#ff00ff' #
+
+  search:
+    matches:
+      foreground: '#23262E'
+      background: '#ffe66d'
+    focused_match:
+      foreground: '#23262E'
+      background: '#f39c12'
+
+  hints:
+    start:
+      foreground: '#1d1f21'
+      background: '#1AE642'
+
+    end:
+      foreground: '#1AE642'
+      background: '#1d1f21'
+
+  line_indicator:
+    foreground: '#33ff33'
+    background: '#1d1f21'
+
+  footer_bar:
+    background: '#731d8b'
+    foreground: '#ffffff'
+
+  selection:
+    text: '#D5CED9'
+    background: '#23262E'
+
+  # Normal colors
+  normal:
+    black:   '#000000'
+    red:     '#ee5d43'
+    green:   '#96E072'
+    yellow:  '#FFE66D'
+    blue:    '#7cb7ff'
+    magenta: '#f92672'
+    cyan:    '#00e8c6'
+    white:   '#dbdbd9'
+  
+  # Bright colors
+  bright:
+    black:   '#ffffff'
+    red:     '#f77272'
+    green:   '#33ff33'
+    yellow:  '#1AE642'
+    blue:    '#68FDFE'
+    magenta: '#ff66ff'
+    cyan:    '#68FDFE'
+    white:   '#dbdbd9'
