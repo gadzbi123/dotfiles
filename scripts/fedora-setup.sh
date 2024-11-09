@@ -2,7 +2,7 @@ set -eou
 
 sudo dnf update --refresh -y
 # packages to build nvidia
-sudo dnf install kernel-devel kernel-headers gcc make dkms acpid libglvnd-glx libglvnd-opengl libglvnd-devel pkgconfig -y
+sudo dnf install kernel-devel kernel-headers gcc make dkms acpid libglvnd-glx libglvnd-opengl libglvnd-devel pkgconfig alacritty -y
 # Install nonfree repos
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
 
@@ -42,4 +42,4 @@ sudo -s eval 'echo UUID=5C6AF5226AF4FA1A /run/media/gadzbi/GryIFilmy ntfs defaul
 echo "\nexport EDITOR=nvim" >> $HOME/.bashrc
 echo "\nexport PATH=$PATH:$HOME/go/bin" >> $HOME/.bashrc
 
-
+gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty

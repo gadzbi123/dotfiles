@@ -13,3 +13,6 @@ ln -s $HOME/proj/notes/scratch.nvim ~/.cache/nvim
 
 # Link alacritty
 ln -s $HOME/dotfiles/.config/alacritty $HOME/.config/alacritty
+
+# Link tmux
+ln -s dotfiles/tmux/.tmux.conf ~/
