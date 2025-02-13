@@ -1,8 +1,10 @@
 set -eou
 
 sudo dnf update --refresh -y
+# local packages
+sudo dnf install foo2qpdl.x86_64 btop enince alacritty -y
 # packages to build nvidia
-sudo dnf install kernel-devel kernel-headers gcc make dkms acpid libglvnd-glx libglvnd-opengl libglvnd-devel pkgconfig alacritty libheif-freeworld -y
+sudo dnf install kernel-devel kernel-headers gcc make dkms acpid libglvnd-glx libglvnd-opengl libglvnd-devel pkgconfig libheif-freeworld -y
 # Install nonfree repos
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
 
