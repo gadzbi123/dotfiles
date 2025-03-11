@@ -1,0 +1,1 @@
+scanimage > my-output-image

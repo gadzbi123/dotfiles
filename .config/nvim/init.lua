@@ -18,7 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
   -- Shows what key hints that lead to actions in the popup window below
   "folke/which-key.nvim",
-  "folke/neodev.nvim", -- TODO change to lazydev.nvim next time
+  "folke/lazydev.nvim",
   -- Themes
   "Mofiqul/dracula.nvim",
   "WhiteBlackGoose/andromeda.nvim",
