@@ -1,5 +1,5 @@
 [window]
-dimensions = { columns = 140, lines = 30 }
+dimensions = { columns = 120, lines = 30 }
 decorations = "Full"
 startup_mode = "Windowed"
 level = "AlwaysOnTop"
