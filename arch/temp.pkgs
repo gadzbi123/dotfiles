@@ -1,0 +1,21 @@
+        #sway
+        "ttf-input-nerd",
+        
+        #budgie all
+        "budgie-backgrounds",
+        "budgie-control-center",
+        "budgie-desktop",
+        "budgie-desktop-view",
+        "budgie-screensaver",
+        "budgie-session"
+
+
+#this not exist
+        "ast",
+        "xhci_pci_renesas",
+        "aic94xx",
+        "bfa",
+        "qed",
+        "qla1280",
+        "qla2xxx",
+        "wd719x",

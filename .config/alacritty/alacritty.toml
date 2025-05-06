@@ -1,8 +1,8 @@
 [window]
 dimensions = { columns = 120, lines = 30 }
-decorations = "Full"
+# decorations = "Full"
 startup_mode = "Windowed"
 level = "AlwaysOnTop"
 
 [general]
-import = [ "~/.config/alacritty/themes/andromeda.toml" ]
+# import = [ "~/.config/alacritty/themes/andromeda.toml" ]
