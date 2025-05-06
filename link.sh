@@ -2,9 +2,6 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-echo "Installing essential packages"
-sudo apt install build-essential git fzf ripgrep xclip
-
 mkdir -p $HOME/.config
 ln -s $HOME/dotfiles/.config/nvim $HOME/.config
 
@@ -15,4 +12,6 @@ ln -s $HOME/proj/notes/scratch.nvim ~/.cache/nvim
 ln -s $HOME/dotfiles/.config/alacritty $HOME/.config
 
 # Link tmux
-ln -s dotfiles/tmux/.tmux.conf ~/
+ln -s $HOME/dotfiles/tmux/.tmux.conf ~/
+
+ln -s $HOME/dotfiles/.config/hypr/hyprland.conf ~/.config/hypr/
