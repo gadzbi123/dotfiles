@@ -10,7 +10,8 @@ pacman -S --needed \
   acpi \
   nemo \
   brightnessctl \
-  man-db 
+  man-db \
+  waybar otf-font-awesome 
   
 # Browser
 xdg-settings set default-web-browser firefox.desktop
