@@ -9,3 +9,6 @@ git clone https://aur.archlinux.org/yay.git $HOME/forks/yay
 cd $HOME/forks/yay
 makepkg -si
 cd
+
+yay -S \
+  aur/hyprsysteminfo-git
