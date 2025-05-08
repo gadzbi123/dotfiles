@@ -11,7 +11,12 @@ pacman -S --needed \
   nemo \
   brightnessctl \
   man-db \
-  waybar otf-font-awesome 
+  waybar otf-font-awesome \
+  ollama-rocm \
+  rocminfo \
+  nvtop \
+  less \
+  hyprlock
   
 # Browser
 xdg-settings set default-web-browser firefox.desktop

@@ -10,5 +10,9 @@ cd $HOME/forks/yay
 makepkg -si
 cd
 
-yay -S \
-  aur/hyprsysteminfo-git
+yay -S -noconfirm \
+  aur/hyprsysteminfo-git \
+  google-chrome \
+  vscode \
+  nm-connection-editor
+

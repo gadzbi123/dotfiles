@@ -5,4 +5,4 @@ startup_mode = "Windowed"
 level = "AlwaysOnTop"
 
 [general]
-# import = [ "~/.config/alacritty/themes/andromeda.toml" ]
+import = [ "~/.config/alacritty/themes/andromeda.toml" ]
