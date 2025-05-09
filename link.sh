@@ -20,3 +20,4 @@ ln -s $HOME/dotfiles/.config/hypr $HOME/.config/hypr
 # Link waybar
 ln -s $HOME/dotfiles/.config/waybar $HOME/.config
 
+ln -s $HOME/dotfiles/.config/wofi $HOME/.config

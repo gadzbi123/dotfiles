@@ -16,10 +16,14 @@ pacman -S --needed \
   rocminfo \
   nvtop \
   less \
-  hyprlock
+  hyprlock \
+  hypridle \
+  #for wofi
+  xterm  
+  
   
 # Browser
-xdg-settings set default-web-browser firefox.desktop
+xdg-settings set default-web-browser google-chrome
 
 # Fonts loading
 fc-cache -fv
