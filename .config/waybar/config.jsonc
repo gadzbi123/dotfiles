@@ -61,6 +61,7 @@
     "format-disconnected": "󰤠 ",
     "interval": 5,
     "tooltip": false,
+    "on-click": "iwgtk"
     // "on-click": "alacritty -e bash -c 'iwctl station wlan0 show | cat'"
   },
   "cpu": {

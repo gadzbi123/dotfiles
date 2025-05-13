@@ -14,5 +14,7 @@ yay -S -noconfirm \
   aur/hyprsysteminfo-git \
   google-chrome \
   vscode \
-  nm-connection-editor
+  nm-connection-editor \
+  kernel-modules-hook \
+  iwgtk
 
