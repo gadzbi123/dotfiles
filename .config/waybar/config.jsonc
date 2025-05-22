@@ -53,7 +53,7 @@
         "warning": 30,
         "critical": 15
     },
-    "interval": 5
+    "interval": 5 
   },
   "network": {
     "format-wifi": "󰤢 ",
