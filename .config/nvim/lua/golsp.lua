@@ -49,15 +49,8 @@ vim.api.nvim_create_autocmd(
   "BufWritePre", {
     pattern = "*.go",
     callback = function()
-      return vim.lsp.buf.format( { async = true, })
+      goimports()
+      return vim.lsp.buf.format({ async = true, })
     end,
-  }
-)
-
--- Run goimports on save
-vim.api.nvim_create_autocmd(
-  "BufWritePre", {
-    pattern = "*.go",
-    callback = goimports,
   }
 )

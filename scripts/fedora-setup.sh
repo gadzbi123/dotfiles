@@ -44,4 +44,8 @@ sudo -s eval 'echo UUID=5C6AF5226AF4FA1A /run/media/gadzbi/GryIFilmy ntfs defaul
 echo "\nexport EDITOR=nvim" >> $HOME/.bashrc
 echo "\nexport PATH=$PATH:$HOME/go/bin" >> $HOME/.bashrc
 
+# Add tmux commands to bashrc
+echo "\nshopt -s histappend\n" >> $HOME/.bashrc
+echo 'export PROMPT_COMMAND="history -a; history -n"' >> $HOME/.bashrc
+
 gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty

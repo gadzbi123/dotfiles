@@ -1,0 +1,115 @@
+[budgie-panel]
+builtin-theme=true
+confirm-remove-applet=true
+dark-theme=true
+migration-level=1
+panels=['681221fc-46a8-11ef-a4f2-f44d307cc81c']
+
+[budgie-panel/applets/{64b20d92-3cd9-11f0-96b6-f44d307cc81c}]
+alignment='end'
+name='DropBy'
+position=0
+
+[budgie-panel/applets/{681306bc-46a8-11ef-a4f2-f44d307cc81c}]
+alignment='start'
+name='Budgie Menu'
+position=0
+
+[budgie-panel/applets/{681a6eb6-46a8-11ef-a4f2-f44d307cc81c}]
+alignment='start'
+name='Icon Task List'
+position=1
+
+[budgie-panel/applets/{681c7864-46a8-11ef-a4f2-f44d307cc81c}]
+alignment='end'
+name='System Tray'
+position=3
+
+[budgie-panel/applets/{681cb98c-46a8-11ef-a4f2-f44d307cc81c}]
+alignment='end'
+name='Notifications'
+position=4
+
+[budgie-panel/applets/{681cf578-46a8-11ef-a4f2-f44d307cc81c}]
+alignment='end'
+name='Status Indicator'
+position=5
+
+[budgie-panel/applets/{681e8370-46a8-11ef-a4f2-f44d307cc81c}]
+alignment='end'
+name='Clock'
+position=6
+
+[budgie-panel/applets/{681ec2cc-46a8-11ef-a4f2-f44d307cc81c}]
+alignment='end'
+name='Raven Trigger'
+position=7
+
+[budgie-panel/applets/{74f8e242-8c90-11ef-a5c0-f44d307cc81c}]
+alignment='end'
+name='BrightnessController'
+position=2
+
+[budgie-panel/applets/{8d4e695c-80ec-11ef-be75-f44d307cc81c}]
+alignment='end'
+name='Show Desktop Button'
+position=8
+
+[budgie-panel/applets/{91501384-3cda-11f0-96b6-f44d307cc81c}]
+alignment='center'
+name='Workspace Stopwatch'
+position=0
+
+[budgie-panel/applets/{bd430146-3cd9-11f0-96b6-f44d307cc81c}]
+alignment='end'
+name='WeatherShow'
+position=1
+
+[budgie-panel/instance/budgie-menu/{681306bc-46a8-11ef-a4f2-f44d307cc81c}]
+enable-menu-label=false
+menu-categories-hover=false
+menu-compact=false
+menu-headers=false
+menu-show-control-center-items=false
+use-default-menu-icon=false
+
+[budgie-panel/instance/icon-tasklist/{681a6eb6-46a8-11ef-a4f2-f44d307cc81c}]
+lock-icons=false
+middle-click-launch-new-instance=true
+only-pinned=false
+pinned-launchers=['org.gnome.Software.desktop', 'nemo.desktop', 'net.thunderbird.Thunderbird.desktop', 'io.gitlab.librewolf-community.desktop', 'com.brave.Browser.desktop', 'google-chrome.desktop', 'com.system76.CosmicTerm.desktop', 'steam.desktop']
+restrict-to-workspace=false
+show-all-windows-on-click=true
+
+[budgie-panel/panels/{681221fc-46a8-11ef-a4f2-f44d307cc81c}]
+applets=['74f8e242-8c90-11ef-a5c0-f44d307cc81c', '681306bc-46a8-11ef-a4f2-f44d307cc81c', '681e8370-46a8-11ef-a4f2-f44d307cc81c', '681c7864-46a8-11ef-a4f2-f44d307cc81c', '681cb98c-46a8-11ef-a4f2-f44d307cc81c', '681a6eb6-46a8-11ef-a4f2-f44d307cc81c', 'bd430146-3cd9-11f0-96b6-f44d307cc81c', '64b20d92-3cd9-11f0-96b6-f44d307cc81c', '681ec2cc-46a8-11ef-a4f2-f44d307cc81c', '91501384-3cda-11f0-96b6-f44d307cc81c', '681cf578-46a8-11ef-a4f2-f44d307cc81c', '8d4e695c-80ec-11ef-be75-f44d307cc81c']
+autohide='none'
+dock-mode=false
+enable-shadow=false
+location='bottom'
+size=36
+spacing=2
+theme-regions=true
+transparency='none'
+
+[budgie-raven]
+allow-volume-overdrive=false
+
+[budgie-wm]
+button-layout='appmenu:minimize,maximize,close'
+caffeine-mode=false
+center-windows=true
+edge-tiling=true
+pause-notifications-on-fullscreen=true
+show-all-windows-tabswitcher=true
+
+[clock/instance/clock/{681e8370-46a8-11ef-a4f2-f44d307cc81c}]
+custom-format='%d.%m.%y %H:%M:%S'
+show-date=false
+show-seconds=false
+use-custom-format=true
+use-custom-timezone=false
+
+[tray/{681c7864-46a8-11ef-a4f2-f44d307cc81c}]
+scaling=false
+spacing=2
