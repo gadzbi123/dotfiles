@@ -20,8 +20,11 @@ ln -s $HOME/dotfiles/.config/hypr $HOME/.config/hypr
 # Link waybar
 ln -s $HOME/dotfiles/.config/waybar $HOME/.config
 
-# Link wofi config
-ln -s $HOME/dotfiles/.config/wofi $HOME/.config
-
 # Add budgie config
 dconf load /com/solus-project/ < $HOME/dotfiles/budgie-config
+
+# Link wofi
+ln -s $HOME/dotfiles/.config/wofi $HOME/.config
+
+# Link wayland for electron
+ln -s $HOME/dotfiles/.config/electron-flags.conf $HOME/.config
