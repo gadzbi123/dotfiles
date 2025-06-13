@@ -49,3 +49,6 @@ echo "\nshopt -s histappend\n" >> $HOME/.bashrc
 echo 'export PROMPT_COMMAND="history -a; history -n"' >> $HOME/.bashrc
 
 gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty
+
+dnf copr enable pgdev/ghostty
+dnf install ghostty
