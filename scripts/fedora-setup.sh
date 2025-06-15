@@ -52,3 +52,5 @@ gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty
 
 dnf copr enable pgdev/ghostty
 dnf install ghostty
+
+dconf load /com/solus-project/ < ~/dotfiles/budgie-config
