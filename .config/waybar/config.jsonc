@@ -36,8 +36,8 @@
   "clock": {
     "timezone": "Europe/Warsaw",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%d.%m.%Y - %H:%M:%S}",
-    "interval": 1
+    "format": "{:%d.%m.%Y - %H:%M}",
+    "interval": 15 
   },
   "backlight":{
     "format": "{icon} {percent}%",
@@ -53,19 +53,19 @@
         "warning": 30,
         "critical": 15
     },
-    "interval": 5 
+    "interval": 30
   },
   "network": {
     "format-wifi": "󰤢 ",
     "format-ethernet": "󰈀 ",
     "format-disconnected": "󰤠 ",
-    "interval": 5,
+    "interval": 6,
     "tooltip": false,
     "on-click": "iwgtk"
     // "on-click": "alacritty -e bash -c 'iwctl station wlan0 show | cat'"
   },
   "cpu": {
-    "interval": 1,
+    "interval": 2,
     "format": "  {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
   },

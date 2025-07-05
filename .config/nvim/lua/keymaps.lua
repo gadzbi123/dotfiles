@@ -2,15 +2,16 @@
 local M = {}
 -- :help map-modes
 function M.map(mode, lhs, rhs, opts)
-  vim.api.nvim_set_keymap(mode, lhs, rhs, { silent = true, table.unpack(opts or {}) })
+  vim.api.nvim_set_keymap(mode, lhs, rhs, { silent = true, unpack(opts or {}) })
 end
 
 function M.noremap(mode, lhs, rhs, opts)
-  vim.api.nvim_set_keymap(mode, lhs, rhs, { noremap = true, silent = true, table.unpack(opts or {}) })
+  local o = opts or {}
+  vim.api.nvim_set_keymap(mode, lhs, rhs, { noremap = true, silent = true, unpack(o) })
 end
 
 function M.exprnoremap(mode, lhs, rhs, opts)
-  vim.api.nvim_set_keymap(mode, lhs, rhs, { noremap = true, silent = true, expr = true, table.unpack(opts or {}) })
+  vim.api.nvim_set_keymap(mode, lhs, rhs, { noremap = true, silent = true, expr = true, unpack(opts or {}) })
 end
 
 -- stylua: ignore start
