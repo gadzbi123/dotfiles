@@ -48,6 +48,9 @@ echo "\nexport PATH=$PATH:$HOME/go/bin" >> $HOME/.bashrc
 echo "\nshopt -s histappend\n" >> $HOME/.bashrc
 echo 'export PROMPT_COMMAND="history -a; history -n"' >> $HOME/.bashrc
 
+# Add cam to desktop
+echo "\n alias='cvlc v4l2:///dev/video1 --no-video-title-show --width 100 --height -10 --video-x 0 --video-y 60 --video-on-top > /dev/null 2>&1'\n" > $HOME/.bashrc
+
 gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty
 
 dnf copr enable pgdev/ghostty
