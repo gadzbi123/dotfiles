@@ -100,6 +100,7 @@ require("lsp")
 require('lspconfig').lua_ls.setup {}
 require("plugins/telescope")
 require("terminal")
+vim.lsp.enable("pyright")
 
 vim.opt.background = "dark"
 vim.cmd("colorscheme andromeda")
