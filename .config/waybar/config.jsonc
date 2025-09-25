@@ -8,6 +8,7 @@
       "backlight",
       "battery",
       "network",
+      "custom/bluetooth",
       "cpu",
       "memory",
       "tray",
@@ -86,5 +87,11 @@
     "tooltip": false,
     "on-click": "sh -c '(sleep 0.5s; hyprlock)' & disown",
     "format": ""
+  },
+  "custom/bluetooth": {
+    "format": "󰂯",
+    "tooltip": false,
+    "on-click": "blueberry",
+    "interval": 0
   }
 }
