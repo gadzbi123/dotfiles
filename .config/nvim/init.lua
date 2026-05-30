@@ -45,8 +45,7 @@ local plugins = {
   'nvim-telescope/telescope-file-browser.nvim',
   {
     'nvim-telescope/telescope-fzf-native.nvim',
-    build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build\
-      build --config Release && cmake --install build --prefix build'
+    build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release'
   },
   'nvim-telescope/telescope.nvim',
   -- Comments
@@ -77,15 +76,30 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    branch = "main",
     config = function()
-      local configs = require("nvim-treesitter.configs")
+      require("nvim-treesitter").setup()
 
-      configs.setup({
-        ensure_installed = { "lua", "markdown", "markdown_inline" },
-        auto_install = true,
-        sync_install = false,
-        highlight = { enable = true },
-        indent = { enable = true },
+      require("nvim-treesitter").install({
+        "lua",
+        "vim",
+        "vimdoc",
+        "query",
+        "markdown",
+        "markdown_inline",
+      })
+
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = {
+          "lua",
+          "vim",
+          "vimdoc",
+          "query",
+          "markdown",
+        },
+        callback = function()
+          vim.treesitter.start()
+        end,
       })
     end
   },
@@ -97,7 +111,7 @@ local plugins = {
 }
 require("lazy").setup(plugins)
 require("lsp")
-require('lspconfig').lua_ls.setup {}
+vim.lsp.enable("lua_ls")
 require("plugins/telescope")
 require("terminal")
 vim.lsp.enable("pyright")

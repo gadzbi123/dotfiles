@@ -57,3 +57,5 @@ dnf copr enable pgdev/ghostty
 dnf install ghostty
 
 dconf load /com/solus-project/ < ~/dotfiles/budgie-config
+
+sudo rpm -ivh https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
