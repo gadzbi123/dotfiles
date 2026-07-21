@@ -70,5 +70,5 @@ M.nnoremap("<C-f>", "<C-f>zz")
 M.nnoremap("<C-b>", "<C-b><S-m>")
 
 -- ScratchPad
-M.nnoremap("<M-C-n>", "<cmd>Scratch<cr>")
-M.nnoremap("<M-C-o>", "<cmd>ScratchOpen<cr>")
+-- M.nnoremap("<M-C-n>", "<cmd>Scratch<cr>")
+-- M.nnoremap("<M-C-o>", "<cmd>ScratchOpen<cr>")
